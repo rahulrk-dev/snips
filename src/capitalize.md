@@ -17,3 +17,17 @@ Capitalizes the first letter of every word in a string.
     return str.replace(/\b[a-z]/g, char => char.toUpperCase());
   }
 ```
+
+### Java
+```java
+  public static String capitalize(String input){  
+    String words[]=input.split("\\s");  
+    String capitalizeWord="";  
+    for(String w:words){  
+        String first=w.substring(0,1);  
+        String afterfirst=w.substring(1);  
+        capitalizeWord+=first.toUpperCase()+afterfirst+" ";  
+    }  
+    return capitalizeWord.trim();  
+  }  
+```
