@@ -1,2 +1,2 @@
-# snips
-Short code snippets for all dev requirements to grab easily 
+# Snips
+Short code snippets for all development requirements to grab easily 
