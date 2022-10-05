@@ -17,7 +17,15 @@ Capitalizes the first letter of every word in a string.
     return str.replace(/\b[a-z]/g, char => char.toUpperCase());
   }
 ```
-
+### Python
+```python
+  def capitalise(string):
+    ls = string.split(" ")
+    
+    for i in range (len(ls)):
+        ch = ls[i].capitalize()
+        print(f"{ch}", end=' ')
+```
 ### Java
 ```java
   public static String capitalize(String input){  
