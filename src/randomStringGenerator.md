@@ -3,7 +3,7 @@ Generate random strings using Javascript
 
 ## Result
 ```
-  50qKj
+generateString(5); // 50qkj
 ```
 
 ## Snip Langauge
@@ -11,17 +11,13 @@ Generate random strings using Javascript
 
 ### JavaScript
 ```js
-const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
 function generateString(length) {
-    let result = ' ';
+    const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
     const charactersLength = characters.length;
     for ( let i = 0; i < length; i++ ) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-
     return result;
 }
-
-console.log(generateString(5));
 ```
