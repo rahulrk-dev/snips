@@ -1,5 +1,5 @@
-# [Random String Generator]
-[Generate random strings using Javascript]
+# Random String Generator
+Generate random strings using Javascript
 
 ## Result
 ```
