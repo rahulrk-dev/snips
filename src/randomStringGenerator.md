@@ -8,6 +8,10 @@ generateString(5); // 50qkj
 
 ## Snip Langauge
 * [JavaScript](#javascript)
+* [Python](#python)a
+* [Java](#java)
+* [Dart](#dart)
+
 
 ### JavaScript
 ```js
@@ -19,5 +23,41 @@ function generateString(length) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+}
+```
+
+### Python
+```python
+import random
+
+def generateString(length):
+    characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    return ''.join(random.choice(characters) for i in range(length))
+```
+
+### Java
+```java
+public static String generateString(int length) {
+    String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    StringBuilder salt = new StringBuilder();
+    Random rnd = new Random();
+    while (salt.length() < 18) {
+        int index = (int) (rnd.nextFloat() * characters.length());
+        salt.append(characters.charAt(index));
+    }
+    String randomStr = salt.toString();
+    return randomStr;
+}
+```
+
+### Dart
+```dart
+import 'dart:math';
+
+String generateString(int length) {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  Random _rnd = Random();
+  return String.fromCharCodes(Iterable.generate(length, (_) => characters.codeUnitAt(_rnd.nextInt(characters.length))));
 }
 ```
