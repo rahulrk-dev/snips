@@ -61,3 +61,23 @@ String generateString(int length) {
   return String.fromCharCodes(Iterable.generate(length, (_) => characters.codeUnitAt(_rnd.nextInt(characters.length))));
 }
 ```
+
+### Bash
+```bash
+#!/bin/bash
+
+generateString(){
+    characters=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+    stringLength=$(($1))
+    result=""
+    count=1
+    while [ $count -lt $1 ] ; do
+        count=$((count+1))
+        result="${result}${characters:RANDOM%${#characters}:1}"
+    done
+    echo $result
+}
+
+# Example to execute
+echo $(generateString 10) #XqyIxIUhW
+```
