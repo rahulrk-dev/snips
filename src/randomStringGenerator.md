@@ -8,7 +8,7 @@ generateString(5); // 50qkj
 
 ## Snip Langauge
 * [JavaScript](#javascript)
-* [Python](#python)a
+* [Python](#python)
 * [Java](#java)
 * [Dart](#dart)
 
