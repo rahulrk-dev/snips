@@ -28,8 +28,6 @@ function generateString(length) {
 
 ### Python
 ```python
-import random
-
 def generateString(length):
     characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     return ''.join(random.choice(characters) for i in range(length))
@@ -52,8 +50,6 @@ public static String generateString(int length) {
 
 ### Dart
 ```dart
-import 'dart:math';
-
 String generateString(int length) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -64,8 +60,6 @@ String generateString(int length) {
 
 ### Bash
 ```bash
-#!/bin/bash
-
 generateString(){
     characters=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
     stringLength=$(($1))
@@ -77,7 +71,4 @@ generateString(){
     done
     echo $result
 }
-
-# Example to execute
-echo $(generateString 10) #XqyIxIUhW
 ```
