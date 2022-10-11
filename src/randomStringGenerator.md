@@ -11,6 +11,7 @@ generateString(5); // 50qkj
 * [Python](#python)
 * [Java](#java)
 * [Dart](#dart)
+* [Bash](#bash)
 
 
 ### JavaScript
