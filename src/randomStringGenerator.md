@@ -8,6 +8,11 @@ generateString(5); // 50qkj
 
 ## Snip Langauge
 * [JavaScript](#javascript)
+* [Python](#python)
+* [Java](#java)
+* [Dart](#dart)
+* [Bash](#bash)
+
 
 ### JavaScript
 ```js
@@ -19,5 +24,52 @@ function generateString(length) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+}
+```
+
+### Python
+```python
+def generateString(length):
+    characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    return ''.join(random.choice(characters) for i in range(length))
+```
+
+### Java
+```java
+public static String generateString(int length) {
+    String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    StringBuilder salt = new StringBuilder();
+    Random rnd = new Random();
+    while (salt.length() < 18) {
+        int index = (int) (rnd.nextFloat() * characters.length());
+        salt.append(characters.charAt(index));
+    }
+    String randomStr = salt.toString();
+    return randomStr;
+}
+```
+
+### Dart
+```dart
+String generateString(int length) {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  Random _rnd = Random();
+  return String.fromCharCodes(Iterable.generate(length, (_) => characters.codeUnitAt(_rnd.nextInt(characters.length))));
+}
+```
+
+### Bash
+```bash
+generateString(){
+    characters=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+    stringLength=$(($1))
+    result=""
+    count=1
+    while [ $count -lt $1 ] ; do
+        count=$((count+1))
+        result="${result}${characters:RANDOM%${#characters}:1}"
+    done
+    echo $result
 }
 ```
