@@ -39,3 +39,21 @@ Capitalizes the first letter of every word in a string.
     return capitalizeWord.trim();  
   }  
 ```
+### C++
+```C++
+string capitalize(string s)
+{
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (i == 0)
+        {
+            s[i] = toupper(s[i]);
+        }
+        if (s[i - 1] == ' ')
+        {
+            s[i] = toupper(s[i]);
+        }
+    }
+    return s;
+}
+```
