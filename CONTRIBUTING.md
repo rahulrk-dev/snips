@@ -8,7 +8,7 @@
 ## Snip Creation
 In order to create a new snip, you should follow the steps below:
 
-- Create a copy of the [snip template](template.md).
+- Create a copy of the [snip template](template.md) in [`src`](src/) folder.
 - Change the name of the newly created file to the name of your snippet.
 - Edit the file, adding your code snip based on the guidelines.
 - Make code snip easily able copy (Do Not add extra code or comments in your main code)
