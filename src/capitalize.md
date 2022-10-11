@@ -10,6 +10,7 @@ Capitalizes the first letter of every word in a string.
 * [JavaScript](#javascript)
 * [Python](#python)
 * [Java](#java)
+* [Cpp](#cpp)
 
 ### JavaScript
 ```js
@@ -39,8 +40,8 @@ Capitalizes the first letter of every word in a string.
     return capitalizeWord.trim();  
   }  
 ```
-### C++
-```C++
+### Cpp
+```cpp
 string capitalize(string s)
 {
     for (int i = 0; i < s.size(); i++)
