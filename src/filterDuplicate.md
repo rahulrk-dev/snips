@@ -3,7 +3,7 @@ Filters Duplicate Values From An Array.
 
 ## Result
 ```js
-  filterDups[1,2,2,3,4]; // '[1,2,3,4]'
+  removeDuplicate([1,2,2,3,3,4]); // '[1,2,3,4]'
 ```
 
 ## Snip Langauge
@@ -14,10 +14,12 @@ Filters Duplicate Values From An Array.
 ```js
   function removeDuplicate(arr){
     var uniqArr = [...new Set(arr)];
+    return uniqArr;
   }
 ```
 ### Python
 ```python
   def removeDuplicate(arr):
     newArr = set(arr)
+    return newArr
 ```
