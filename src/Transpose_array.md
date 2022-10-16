@@ -62,9 +62,9 @@ public int[][] transposeArray(int[][] A)) {
 ### JavaScript
 ```js
 function transposeArray(A) {
-    var B = Array(N);
+    var B = Array(A.length);
     for(i=0; i<N; i++){
-        B[i] = Array(N).fill(0);
+        B[i] = Array(A[0].length).fill(0);
     }
     for (i = 0; i < A.length; i++)
             for (j = 0; j < A[0].length; j++)
