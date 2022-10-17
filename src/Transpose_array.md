@@ -7,7 +7,7 @@ TransposeArray([[1,2,3] ,[4,5,6] ,[7,8,9]]); // [[1,4,7] ,[2,5,8] ,[3,6,9]]
 ```
 
 ## Snip Langauge
-* [C++](#C++)
+* [C++](#c)
 * [Python](#python)
 * [Java](#java)
 * [JavaScript](#javascript)
@@ -63,7 +63,7 @@ public int[][] transposeArray(int[][] A)) {
 ```js
 function transposeArray(A) {
     var B = Array(A.length);
-    for(i=0; i<N; i++){
+    for(i = 0; i < A.length; i++){
         B[i] = Array(A[0].length).fill(0);
     }
     for (i = 0; i < A.length; i++)
