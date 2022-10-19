@@ -1,5 +1,5 @@
-# [Snippet Name]
-[Short description]
+# [Random Number Generator within a given Range]
+[Its an snippet for a  function random number generator which whill generates a number within a given range]
 
 ## Result
 ```
@@ -11,7 +11,6 @@
 
 ### JavaScript
 ```js
-  <script> 
 
 function randomNumber(min, max) { 
     return Math.random() * (max - min) + min;
@@ -19,5 +18,5 @@ function randomNumber(min, max) {
   
 document.write("Random Number between 1 and 100: ") 
 document.write( randomNumber(1, 100) ); 
-</script> 
+
 ```
