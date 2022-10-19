@@ -1,9 +1,9 @@
 # [Random Number Generator within a given Range]
-[Its an snippet for a  function random number generator which whill generates a number within a given range]
+[Its an snippet for a  function random number generator which whill generates a number within a given range include extreme values]
 
 ## Result
 ```
-  // Add final result
+console.log(randomNumber( 1, 100 )); // 68
 ```
 
 ## Snip Langauge
@@ -13,10 +13,9 @@
 ```js
 
 function randomNumber(min, max) { 
-    return Math.random() * (max - min) + min;
+    return Math.floor(Math.random() * (max - min-1) + min+1);
 } 
   
-document.write("Random Number between 1 and 100: ") 
-document.write( randomNumber(1, 100) ); 
+
 
 ```
