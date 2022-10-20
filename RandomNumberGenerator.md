@@ -1,5 +1,5 @@
 # Random Number Generator within a given Range
-Its an snippet for a  function random number generator which whill generates a number within a given range include extreme values
+This snippet will generates a number within a given range include extreme values
 
 ## Result
 ```
