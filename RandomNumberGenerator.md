@@ -1,9 +1,9 @@
-# [Random Number Generator within a given Range]
-[Its an snippet for a  function random number generator which whill generates a number within a given range include extreme values]
+# Random Number Generator within a given Range
+Its an snippet for a  function random number generator which whill generates a number within a given range include extreme values
 
 ## Result
 ```
-console.log(randomNumber( 1, 100 )); // 68
+randomNumber( 1, 100 ); // 68
 ```
 
 ## Snip Langauge
