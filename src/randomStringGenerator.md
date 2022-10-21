@@ -77,7 +77,6 @@ generateString(){
 
 ### Cpp
 ```cpp
-using namespace std;
 const int ch_MAX = 26;
 string RandomString(int ch)
 {
@@ -90,12 +89,5 @@ string RandomString(int ch)
         result = result + alpha[rand() % ch_MAX];
 
     return result;
-}
-int main()
-{
-srand(time(NULL));
-   int ch = 15;
-cout<<RandomString(ch) <<"\n";
-   return 0;
 }
 ```
