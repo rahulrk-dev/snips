@@ -1,23 +1,20 @@
 # [random integer]
 
-```
-- Returns a random integer.
-```
+- generate random integer in given range.
 
 ## Result
 
+```js
+  -returns any random integer between min and max range ex(1,676,999...etc).
 ```
-// Returns a random integer from 0 till max;
-```
-
-## Langauge
-
-- [JavaScript](#javascript)
 
 ### JavaScript
 
 ```js
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+let max = 9999999;
+let min = -9999999;
+
+function getRandomInt() {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 ```
