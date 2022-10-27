@@ -32,6 +32,6 @@ function bubbleSort(A) {
       break;
     }
   }
-  console.log(A);
+  return A;
 }
 ```
