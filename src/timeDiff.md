@@ -1,4 +1,4 @@
-# [Snippet Name]
+# Time Difference
 Returns the time difference between input and current time.
 
 ## Result
@@ -12,7 +12,7 @@ Returns the time difference between input and current time.
 
 ### JavaScript
 ```js
-  const timeDiff = (input) => {
+  const timeDiff = (input = " ") => {
     const [date, time] = input.split(' ')
     const [year, month, day] = date.split('-')
     const [hour, minute, second] = time.split(':')
@@ -48,6 +48,6 @@ Returns the time difference between input and current time.
           str += "s"
       }
       return (acc ? acc + " " : acc) + str
-    }, "")
+    }, "") || "0 seconds"
   }
 ```
