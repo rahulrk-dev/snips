@@ -15,7 +15,6 @@ randomNumber(1, 100); // 68
 - [Python](#python)
 - [Java](#java)
 - [C#](#c)
-- [Go](#go)
 - [php](#php)
 - [perl](#perl)
 
@@ -30,25 +29,33 @@ function randomNumber(min, max) {
 ### Cpp
 
 ```cpp
-const unsigned long long a = 6364136223846793005ULL;
-const unsigned long long c = 1ULL << 30;
-const unsigned long long m = (1ULL << 62) - 1;
-
 int randomNumber(int min, int max) {
-    static unsigned long long seed = 0;
+    int dummy_variable = 0;
+    unsigned long long seed = reinterpret_cast<unsigned long long>(&dummy_variable);
 
-    seed = (seed == 0) ? time(NULL) : (a * seed + c) & m;
+    struct timespec time;
+    if (clock_gettime(CLOCK_REALTIME, &time) == 0) {
+        seed ^= static_cast<unsigned long long>(time.tv_sec) << 32 | time.tv_nsec;
+    }
+
+    const unsigned long long m = (1ULL << 62) - 1;
+    const unsigned long long c = 1ULL << 30;
+    const unsigned long long a = 6364136223846793005ULL;
+
+    seed = (a * seed + c) & m;
 
     int random_number = min + (seed >> 31) % (max - min + 1);
     return random_number;
 }
+
 ```
 
 ### Python
 
 ```py
-def randomNumber(min_value, max_value, seed=None):
-    seed = seed if seed is not None else id(min_value)
+def randomNumber(min_value, max_value):
+    n = 10
+    seed = id(n)
 
     seed = (1664525 * seed + 1013904223) & 0xFFFFFFFF
     random_float = seed / 0xFFFFFFFF
@@ -72,7 +79,7 @@ public static int customRandom(int min, int max) {
        int random_number = (int) (min + Math.abs(seed) % (max - min + 1));
 
        return random_number;
-   }
+}
 ```
 
 ### C#
@@ -86,23 +93,6 @@ public static int randomNumber(int min, int max)
     }
     Random random = new Random();
     return random.Next(min, max + 1);
-}
-```
-
-### Go
-
-```go
-func customRandom(min, max int) int {
-    const c = 1 << 30
-    const m = (1 << 62) - 1
-    const a = 6364136223846793005
-
-    staticSeed := uint64(42)
-    staticSeed = (staticSeed * a + c) & m
-
-    randomNum := min + int(staticSeed>>31)%(max-min+1)
-
-    return randomNum
 }
 ```
 
