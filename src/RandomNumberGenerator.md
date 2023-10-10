@@ -12,7 +12,6 @@ randomNumber(1, 100); // 68
 
 - [JavaScript](#javascript)
 - [Cpp](#cpp)
-- [Python](#python)
 - [Java](#java)
 - [C#](#c)
 - [php](#php)
@@ -48,21 +47,6 @@ int randomNumber(int min, int max) {
     return random_number;
 }
 
-```
-
-### Python
-
-```py
-def randomNumber(min_value, max_value):
-    n = 10
-    seed = id(n)
-
-    seed = (1664525 * seed + 1013904223) & 0xFFFFFFFF
-    random_float = seed / 0xFFFFFFFF
-
-    random_integer = int(min_value + random_float * (max_value - min_value + 1))
-
-    return random_integer
 ```
 
 ### Java
