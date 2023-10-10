@@ -8,6 +8,7 @@ Returns the Case of a given string
 
 ## Snip Langauge
 * [JavaScript](#javascript)
+* [Go](#go)
 
 ### JavaScript
 ```js
@@ -56,4 +57,38 @@ Returns the Case of a given string
     else
         return "sentence Case"
     }
+```
+
+### Go
+```go
+func CheckCase(input string) string {
+	upper := 0
+	lower := 0
+	title := 0
+
+	for _, char := range input {
+		if unicode.IsUpper(char) {
+			upper++
+		} else if unicode.IsLower(char) {
+			lower++
+		}
+	}
+
+	words := strings.Fields(input)
+	for _, word := range words {
+		if unicode.IsUpper([]rune(word)[0]) {
+			title++
+		}
+	}
+
+	if upper == len(input) {
+		return "Uppercase"
+	} else if lower == len(input) {
+		return "Lowercase"
+	} else if title == len(words) {
+		return "Title Case"
+	} else {
+		return "Sentence Case"
+	}
+}
 ```
