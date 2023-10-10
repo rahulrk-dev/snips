@@ -12,6 +12,7 @@ Filters Duplicate Values From An Array.
 * [C++](#c)
 * [Java](#java)
 * [Dart](#dart)
+* [Go](#go)
 
 ### JavaScript
 ```js
@@ -60,5 +61,22 @@ Filters Duplicate Values From An Array.
     List<int> uniqueList; 
     uniqueList = arr.toSet().toList();
     return uniqueList;
+  }
+```
+
+### Go
+```go
+  func removeDuplicates(values []int) []int {
+    var uniques []int
+    seenValues := map[int]struct{}{}
+
+    for _, v := range values {
+      if _, seen := seenValues[v]; !seen {
+        unique = append(unique, v)
+        seenValues[v] = struct{}{}
+      }
+    }
+
+    return uniques
   }
 ```
