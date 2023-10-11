@@ -42,10 +42,10 @@ const countOccurrences = (arr, valueToCount) => {
 ### C++
 
 ```c++
-int countOccurrences(const std::vector<int>& arr, int valueToCount) {
+int countOccurrences(int arr[], int size, int valueToCount) {
     int count = 0;
-    for (int element : arr) {
-        if (element == valueToCount) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == valueToCount) {
             count++;
         }
     }
