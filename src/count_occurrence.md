@@ -1,24 +1,11 @@
-# count_occurrence
-To Count The Occurrence of value in an array
+# Count Occurrence
+To Count The Occurrence of particular value or element in an array
 
 ## Result
 
 ```Py
    count_occurrences([2,2,4,5,6], target_value) // '2'
 ```
-
-```JavaScript
-   count_occurrences(myArray, targetValue);
-```
-
-```C++
-   count_ocurrences({4,5,8,6,8,1,8}, 8); // '3'
-```
-
-```PHP
-   count_ocurrences({4,5,8,6,8,1,8}, 8); // '3'
-```
-
 
 ## Snip Langauge
 
@@ -54,6 +41,7 @@ const countOccurrences = (arr, valueToCount) => {
 
 ### C++
 
+```c++
 int countOccurrences(const std::vector<int>& arr, int valueToCount) {
     int count = 0;
     for (int element : arr) {
@@ -63,7 +51,9 @@ int countOccurrences(const std::vector<int>& arr, int valueToCount) {
     }
     return count;
 }
+```
 
+```php
 ### PHP
 
 function countOccurrences($arr, $valueToCount) {
@@ -75,3 +65,4 @@ function countOccurrences($arr, $valueToCount) {
     }
     return $count;
 }
+```
