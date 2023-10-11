@@ -53,9 +53,8 @@ int countOccurrences(const std::vector<int>& arr, int valueToCount) {
 }
 ```
 
-```php
 ### PHP
-
+```php
 function countOccurrences($arr, $valueToCount) {
     $count = 0;
     foreach ($arr as $element) {
