@@ -11,7 +11,6 @@ To Count The Occurrence of particular value or element in an array
 
 - [Python](#python)
 - [JavaScript](#javascript)
-- [C++](#c++)
 - [PHP](#php)
 
 ### Python
@@ -39,22 +38,6 @@ const countOccurrences = (arr, valueToCount) => {
 };
 ```
 
-### C++
-
-```c++
-int countOccurrences(int arr[], int valueToCount) {
-    int count = 0;
-    int i = 0;
-
-    while (arr[i] != -1) { // Assuming -1 is the sentinel value
-        if (arr[i] == valueToCount) {
-            count++;
-        }
-        i++;
-    }
-    return count;
-}
-```
 
 ### PHP
 ```php
