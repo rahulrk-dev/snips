@@ -42,12 +42,15 @@ const countOccurrences = (arr, valueToCount) => {
 ### C++
 
 ```c++
-int countOccurrences(int arr[], int size, int valueToCount) {
+int countOccurrences(int arr[], int valueToCount) {
     int count = 0;
-    for (int i = 0; i < size; i++) {
+    int i = 0;
+
+    while (arr[i] != -1) { // Assuming -1 is the sentinel value
         if (arr[i] == valueToCount) {
             count++;
         }
+        i++;
     }
     return count;
 }
