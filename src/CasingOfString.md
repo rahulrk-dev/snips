@@ -96,27 +96,26 @@ func CheckCase(input string) string {
 
 ### Python
 ```python
-import unicodedata
 
-def check_case(input_str):
+def CheckCase(string):
     upper = 0
     lower = 0
     title = 0
-
-    for char in input_str:
+    
+    for char in string:
         if char.isupper():
             upper += 1
         elif char.islower():
             lower += 1
 
-    words = input_str.split()
+    words = string.split()
     for word in words:
         if word[0].isupper():
             title += 1
 
-    if upper == len(input_str):
+    if upper == len(string):
         return "Uppercase"
-    elif lower == len(input_str):
+    elif lower == len(string):
         return "Lowercase"
     elif title == len(words):
         return "Title Case"
