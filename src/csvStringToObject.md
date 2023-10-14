@@ -8,7 +8,7 @@ CSV_to_JSON('col1,col2\na,b\nc,d')
 ```
 
 ## Snip Langauge
-* [JavaScript](#javascript)	* [JavaScript](#javascript)
+* [JavaScript](#javascript)
 * [Python](#python)
 
 
