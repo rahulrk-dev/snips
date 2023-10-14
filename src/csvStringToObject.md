@@ -9,6 +9,7 @@ CSV_to_JSON('col1,col2\na,b\nc,d')
 
 ## Snip Langauge
 * [JavaScript](#javascript)
+* [Python](#python)
 
 ### JavaScript
 ```js
@@ -22,5 +23,14 @@ const CSV_to_JSON = (data, delimiter = ',') => {
       return titles.reduce((obj, title, index) => ((obj[title] = values[index]), obj), {});
     });
 };
+```
+
+
+### Python
+```py
+def csv_to_json(data, delimiter=','):
+    csv_data = io.StringIO(data)
+    reader = csv.DictReader(csv_data, delimiter=delimiter)
+    return list(reader)
 ```
 
