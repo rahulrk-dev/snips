@@ -9,6 +9,7 @@ Returns the Case of a given string
 ## Snip Langauge
 * [JavaScript](#javascript)
 * [Go](#go)
+* [Python](#python)
 
 ### JavaScript
 ```js
@@ -91,4 +92,41 @@ func CheckCase(input string) string {
 		return "Sentence Case"
 	}
 }
+```
+
+### Python
+```python
+
+def CheckCase(string):
+    upper = 0
+    space = 0
+
+    for char in string:
+        if char.isupper() and char != char.lower():
+            upper += 1
+
+        if char == " ":
+            space += 1
+
+    lower = 0
+
+    for char in string:
+        if char.islower() and char != char.upper():
+            lower += 1
+
+    title = 0
+    sentence = string.split()
+
+    for word in sentence:
+        if word[0].isupper() and word[0] != word[0].lower():
+            title += 1
+
+    if upper == len(string) - space:
+        return "Uppercase"
+    elif lower == len(string) - space:
+        return "Lowercase"
+    elif title == len(sentence):
+        return "Title Case"
+    else:
+        return "Sentence Case"
 ```
