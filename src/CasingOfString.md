@@ -99,25 +99,33 @@ func CheckCase(input string) string {
 
 def CheckCase(string):
     upper = 0
-    lower = 0
-    title = 0
-    
+    space = 0
+
     for char in string:
-        if char.isupper():
+        if char.isupper() and char != char.lower():
             upper += 1
-        elif char.islower():
+
+        if char == " ":
+            space += 1
+
+    lower = 0
+
+    for char in string:
+        if char.islower() and char != char.upper():
             lower += 1
 
-    words = string.split()
-    for word in words:
-        if word[0].isupper():
+    title = 0
+    sentence = string.split()
+
+    for word in sentence:
+        if word[0].isupper() and word[0] != word[0].lower():
             title += 1
 
-    if upper == len(string):
+    if upper == len(string) - space:
         return "Uppercase"
-    elif lower == len(string):
+    elif lower == len(string) - space:
         return "Lowercase"
-    elif title == len(words):
+    elif title == len(sentence):
         return "Title Case"
     else:
         return "Sentence Case"
