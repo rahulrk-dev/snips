@@ -3,7 +3,7 @@ This snip returns different elements between two arrays.
 
 ## Result
 ```
- differentElemArray([1, 2, 3, 4, 5],[3, 4, 5, 6, 7]); //[1, 2]
+ differentElemArray([1, 2, 3, 4, 5],[3, 4, 5, 6, 7]); //[1, 2, 6, 7]
 ```
 
 ## Snip Langauge
@@ -13,7 +13,7 @@ This snip returns different elements between two arrays.
 
 ### JavaScript
 ```js
-function arrayDiff(array1, array2) {
+function differentElemArray(array1, array2) {
     const diff = array1.filter((element) => !array2.includes(element)); 
     return diff;
 }
@@ -28,25 +28,34 @@ def differentElemArray(arr1, arr2):
 
 ### Java
 ```java
-    import java.util.*;
-
-    class JavaExample{
-        
-    
-        public static void diffElem(List list1,List list2){
-          Set<Integer> union = new HashSet<Integer>(list1);
-          union.addAll(list2);
-          Set<Integer> intersection = new HashSet<Integer>(list1);
-          intersection.retainAll(list2);
-          union.removeAll(intersection);
-          for (Integer n : union) {
-              System.out.println(n);
+public static Integer[] differentElemArray(int[] arr1, int[] arr2){
+    Integer[] res = new Integer[Math.max(arr1.length, arr2.length)]; 
+    for (int i : arr1) {
+        boolean contains = false;
+        for (int j : arr2) {
+            if (i == j) {
+              contains = true;
+              break;
+              }
+         }
+         if (!contains){
+            res[x] = i;
+            x+=1;
+         }
+    }
+    for (int i : arr2) {
+        boolean contains = false;
+            for (int j : arr1) {
+                if (i == j) {
+                    contains = true;
+                    break;
+                }
             }
-        }
-        public static void main(String[] args) {
-            List<Integer> arr1 = Arrays.asList(1, 2, 3, 4, 4, 5, 6);
-             List<Integer> arr2 = Arrays.asList(5, 6, 7, 8);
-            diffElem(arr1,arr2);
+        if (!contains){
+            res[x] = i;
+            x+=1;
         }
     }
+    return res;
+}
 ```
