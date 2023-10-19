@@ -14,7 +14,8 @@ This snip returns different elements between two arrays.
 ### JavaScript
 ```js
 function differentElemArray(array1, array2) {
-    const diff = array1.filter((element) => !array2.includes(element)); 
+    const diff = array1.filter((element) => !array2.includes(element))
+                 .concat(array2.filter(element => !array1.includes(element)));
     return diff;
 }
 
@@ -22,7 +23,7 @@ function differentElemArray(array1, array2) {
 ### Python
 ```python
 def differentElemArray(arr1, arr2):
-  res = list(set(arr1) - set(arr2))
+  res = list(set(arr1) - set(arr2)) + list(set(arr2) - set(arr1))
   return res
 ```
 
