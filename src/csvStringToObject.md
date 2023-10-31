@@ -28,9 +28,17 @@ const CSV_to_JSON = (data, delimiter = ',') => {
 
 ### Python
 ```py
-def csv_to_json(data, delimiter=','):
-    csv_data = io.StringIO(data)
-    reader = csv.DictReader(csv_data, delimiter=delimiter)
-    return list(reader)
+def CSV_to_JSON(data, delimiter=','):
+    lines = data.split('\n')
+    header = lines[0].split(delimiter)
+    result = []
+
+    for line in lines[1:]:
+        values = line.split(delimiter)
+        if len(values) == len(header):
+            row = {header[i]: values[i] for i in range(len(header))}
+            result.append(row)
+
+    return result
 ```
 
