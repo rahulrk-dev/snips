@@ -13,9 +13,9 @@ A program to quickly determine the byte size of a string, which is useful for ma
 
 ### Java
 ```java
-  public static void lengthOfbyteString(String str){
+  public static int lengthOfbyteString(String str){
         int sizeInBytes = str.getBytes().length;
-        System.out.println("Size of the string in bytes: " + sizeInBytes);
+        return sizeInBytes;
   }
 ```
 
@@ -23,7 +23,7 @@ A program to quickly determine the byte size of a string, which is useful for ma
 ```py
   def lengthOfByteString(text):
     sizeInBytes = len(text.encode('utf-8'))
-    print(f"Size of the string in bytes: {sizeInBytes}")
+    return sizeInBytes
 ```
 
 ### JavaScript
@@ -32,6 +32,6 @@ A program to quickly determine the byte size of a string, which is useful for ma
     const encoder = new TextEncoder();
     const bytes = encoder.encode(str);
     const sizeInBytes = bytes.length;
-    console.log(`Size of the string in bytes: ${sizeInBytes}`);
+    return sizeInBytes;
 }
 ```
