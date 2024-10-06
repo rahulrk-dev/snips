@@ -1,4 +1,4 @@
-# Different Element in Array
+# Byte to Human Readable Format
 This snippet converts a given number of bytes into a human-readable string format such as KB, MB, GB, etc.
 
 ## Result
